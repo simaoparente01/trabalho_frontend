@@ -13,6 +13,7 @@
 
 import React, { useState } from 'react';
 import PokemonTCG from 'pokemontcgsdk';
+import DetalhesCarta from './detalhes_cartas';
 
 const apiKey = import.meta.env.VITE_POKEMON_API_KEY;
 
@@ -65,7 +66,9 @@ function Searchbar() {
       {carta && (
         <div className='card mt-4 p-3'>
           <h4>{carta.name}</h4>
-          <img src={carta.images.small} alt={carta.name} />
+
+          {/* Detalhes da carta (somente se encontrada) */}
+          <DetalhesCarta carta={carta} />
         </div>
       )}
     </div>
