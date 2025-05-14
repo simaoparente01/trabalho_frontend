@@ -1,5 +1,5 @@
 /**
- * Nome do arquivo: APP.js
+ * Nome do arquivo: APP.jsx
  * data de ciração 09/05/2025
  * Autor: Simão Pedro
  * Matricula: 01744402
@@ -12,6 +12,7 @@
 
 import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Searchbar from './componentes/barrapesquisa';
 
 function App() {
   // 1️⃣ Estado que armazena as cartas salvas
@@ -29,6 +30,7 @@ function App() {
     <div className='container mt-4'>
       {/* 3️⃣ Título da seção */}
       <h3 className='mb-3'>Cartas Salvas</h3>
+      <Searchbar />
 
       {/* 4️⃣ Se houver cartas, exibe; senão, mostra mensagem */}
       {cartasSalvas.length > 0 ? (
